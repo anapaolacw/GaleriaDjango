@@ -1,0 +1,42 @@
+{% extends "base.html" %} {% block titulo %}Galeria{% endblock %} {% block estilos %}
+<link rel="stylesheet" href="/static/styles/style.css">{% endblock %} {% block encabezado %}Galeria de imagenes{% endblock %} {% block contenido %}
+<div class="col-12" id="thumbs">
+    <img id="ima2" class="thumb" src="/static/imagenes/imagen1.jpg" alt="1" data-toggle="modal" data-target="#myModal" />
+    <img id="ima3" class="thumb" src="/static/imagenes/imagen2.jpg" alt="2" data-toggle="modal" data-target="#myModal" />
+    <img id="ima4" class="thumb" src="/static/imagenes/imagen3.jpg" alt="3" data-toggle="modal" data-target="#myModal" />
+    <img id="ima5" class="thumb" src="/static/imagenes/imagen4.jpg" alt="4" data-toggle="modal" data-target="#myModal" />
+    <img id="ima2" class="thumb" src="/static/imagenes/imagen5.jpg" alt="5" data-toggle="modal" data-target="#myModal" />
+    <img id="ima3" class="thumb" src="/static/imagenes/imagen6.jpg" alt="6" data-toggle="modal" data-target="#myModal" />
+</div>
+<div class="container">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img id="imagen" src="/static/imagenes/imagen1.jpg" alt="Error" style="width:100%;">
+                            </div>
+                        </div>
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					      	<span class="glyphicon glyphicon-chevron-left"></span>
+					      	<span class="sr-only">Previous</span>
+					    </a>
+					    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+					      	<span class="glyphicon glyphicon-chevron-right"></span>
+					      	<span class="sr-only">Next</span>
+					    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
